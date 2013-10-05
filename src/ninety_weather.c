@@ -29,6 +29,15 @@
 #define TIMEZONE_ONE_NAME "CHN"
 #define TIMEZONE_TWO_NAME "GER"
 
+//#define TIMEZONE_ONE_NAME "SYD"
+//#define TIMEZONE_TWO_NAME "BER"
+	
+#define TIMEZONE_ONE_OFFSET (+8)
+#define TIMEZONE_TWO_OFFSET (+2)
+#define TIMEZONE_LOCAL_OFFSET (-7)
+
+	
+	
 PBL_APP_INFO(MY_UUID,
 	     "Vic 91", "rfrcarvalho & Vic",
 	     1, 0, /* App major/minor version */
@@ -295,11 +304,13 @@ void receivedtime(int32_t utc_offset_seconds, bool is_dst, uint32_t unixtime, co
 void update_display(PblTm *current_time) {
   
   unsigned short display_hour = get_display_hour(current_time->tm_hour);
-  unsigned short tzOne_hour = current_time->tm_hour + 15;
-  unsigned short tzTwo_hour = current_time->tm_hour + 9;
+  short tzOne_hour = current_time->tm_hour + (TIMEZONE_ONE_OFFSET - TIMEZONE_LOCAL_OFFSET);
+  short tzTwo_hour = current_time->tm_hour + (TIMEZONE_TWO_OFFSET - TIMEZONE_LOCAL_OFFSET);
 	
-	if (tzOne_hour >= 24)	tzOne_hour -= 24;	
-	if (tzTwo_hour >= 24)	tzTwo_hour -= 24;	
+	if (tzOne_hour >= 24)	tzOne_hour -= 24;
+	if (tzOne_hour <   0)	tzOne_hour += 24;
+	if (tzTwo_hour >= 24)	tzTwo_hour -= 24;
+	if (tzTwo_hour <   0)	tzTwo_hour += 24;	
   
   //Hour
   if (display_hour/10 != 0) {
@@ -512,12 +523,12 @@ void handle_init(AppContextRef ctx) {
 	text_layer_set_text(&sms_layer, "?");
 
 	// DEBUG Info layer 
-	text_layer_init(&debug_layer, window.layer.frame);
+	/*text_layer_init(&debug_layer, window.layer.frame);
 	text_layer_set_text_color(&debug_layer, GColorWhite);
 	text_layer_set_background_color(&debug_layer, GColorClear);
 	layer_set_frame(&debug_layer.layer, GRect(50, 152, 100, 30));
 	text_layer_set_font(&debug_layer, fonts_get_system_font(FONT_KEY_GOTHIC_14));
-	layer_add_child(&window.layer, &debug_layer.layer);
+	layer_add_child(&window.layer, &debug_layer.layer);*/
 	
 	// Second dot
 	layer_init(&secondDotLayer, window.layer.frame);
@@ -550,7 +561,7 @@ void handle_deinit(AppContextRef ctx) {
 	(void)ctx;
 
 	bmp_deinit_container(&background_image);
-	//bmp_deinit_container(&time_format_image);
+	bmp_deinit_container(&time_format_image);
 
 	for (int i = 0; i < TOTAL_DATE_DIGITS; i++) {
 		bmp_deinit_container(&date_digits_images[i]);
@@ -558,7 +569,13 @@ void handle_deinit(AppContextRef ctx) {
 	
 	for (int i = 0; i < TOTAL_TIME_DIGITS; i++) {
 		bmp_deinit_container(&time_digits_images[i]);
+		bmp_deinit_container(&tzOne_digits_images[i]);
+		bmp_deinit_container(&tzTwo_digits_images[i]);
 	}
+	
+	bmp_deinit_container(&tzMore[0]);
+	bmp_deinit_container(&tzMore[1]);	
+	
 }
 
 void pbl_main(void *params) {
