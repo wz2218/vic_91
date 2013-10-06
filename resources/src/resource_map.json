@@ -1,114 +1,11 @@
 {
     "media": [
         {
-            "defName": "IMAGE_PM_MODE",
-            "type": "png",
-            "file": "images/time_format_PM.png"
-        },
-        {
-            "defName": "IMAGE_MENU_ICON",
-            "type": "png",
-            "file": "images/menu_icon_91w.png"
-        },
-        {
-            "defName": "IMAGE_BACKGROUND",
-            "type": "png",
-            "file": "images/background.png"
-        },
-        {
-            "defName": "IMAGE_DATENUM_0",
-            "type": "png",
-            "file": "images/datenum_0.png"
-        },
-        {
-            "defName": "IMAGE_DATENUM_1",
-            "type": "png",
-            "file": "images/datenum_1.png"
-        },
-        {
-            "defName": "IMAGE_DATENUM_2",
-            "type": "png",
-            "file": "images/datenum_2.png"
-        },
-        {
-            "defName": "IMAGE_DATENUM_3",
-            "type": "png",
-            "file": "images/datenum_3.png"
-        },
-        {
-            "defName": "IMAGE_DATENUM_4",
-            "type": "png",
-            "file": "images/datenum_4.png"
-        },
-        {
-            "defName": "IMAGE_DATENUM_5",
-            "type": "png",
-            "file": "images/datenum_5.png"
-        },
-        {
-            "defName": "IMAGE_DATENUM_6",
-            "type": "png",
-            "file": "images/datenum_6.png"
-        },
-        {
-            "defName": "IMAGE_DATENUM_7",
-            "type": "png",
-            "file": "images/datenum_7.png"
-        },
-        {
-            "defName": "IMAGE_DATENUM_8",
-            "type": "png",
-            "file": "images/datenum_8.png"
-        },
-        {
-            "defName": "IMAGE_DATENUM_9",
-            "type": "png",
-            "file": "images/datenum_9.png"
-        },
-        {
-            "defName": "IMAGE_NUM_0",
-            "type": "png",
-            "file": "images/num_0.png"
-        },
-        {
-            "defName": "IMAGE_NUM_1",
-            "type": "png",
-            "file": "images/num_1.png"
-        },
-        {
-            "defName": "IMAGE_NUM_2",
-            "type": "png",
-            "file": "images/num_2.png"
-        },
-        {
-            "defName": "IMAGE_NUM_3",
-            "type": "png",
-            "file": "images/num_3.png"
-        },
-        {
-            "defName": "IMAGE_NUM_4",
-            "type": "png",
-            "file": "images/num_4.png"
-        },
-        {
-            "defName": "IMAGE_NUM_5",
-            "type": "png",
-            "file": "images/num_5.png"
-        },
-        {
-            "defName": "IMAGE_NUM_6",
-            "type": "png",
-            "file": "images/num_6.png"
-        },
-        {
-            "defName": "IMAGE_NUM_7",
-            "type": "png",
-            "file": "images/num_7.png"
-        },
-        {
-            "defName": "IMAGE_NUM_8",
-            "type": "png",
-            "file": "images/num_8.png"
+            "trackingAdjust": -4,
+            "characterRegex": "[0-9:\u00b0-]",
+            "defName": "FUTURA_40",
+            "type": "font",
+            "file": "fonts/futura.ttf"
         },
         {
             "defName": "IMAGE_NUM_9",
@@ -116,11 +13,114 @@
             "file": "images/num_9.png"
         },
         {
-            "trackingAdjust": -4,
-            "characterRegex": "[0-9:\u00b0-]",
-            "defName": "FUTURA_40",
-            "type": "font",
-            "file": "fonts/futura.ttf"
+            "defName": "IMAGE_NUM_8",
+            "type": "png",
+            "file": "images/num_8.png"
+        },
+        {
+            "defName": "IMAGE_NUM_7",
+            "type": "png",
+            "file": "images/num_7.png"
+        },
+        {
+            "defName": "IMAGE_NUM_6",
+            "type": "png",
+            "file": "images/num_6.png"
+        },
+        {
+            "defName": "IMAGE_NUM_5",
+            "type": "png",
+            "file": "images/num_5.png"
+        },
+        {
+            "defName": "IMAGE_NUM_4",
+            "type": "png",
+            "file": "images/num_4.png"
+        },
+        {
+            "defName": "IMAGE_NUM_3",
+            "type": "png",
+            "file": "images/num_3.png"
+        },
+        {
+            "defName": "IMAGE_NUM_2",
+            "type": "png",
+            "file": "images/num_2.png"
+        },
+        {
+            "defName": "IMAGE_NUM_1",
+            "type": "png",
+            "file": "images/num_1.png"
+        },
+        {
+            "defName": "IMAGE_NUM_0",
+            "type": "png",
+            "file": "images/num_0.png"
+        },
+        {
+            "defName": "IMAGE_DATENUM_9",
+            "type": "png",
+            "file": "images/datenum_9.png"
+        },
+        {
+            "defName": "IMAGE_DATENUM_8",
+            "type": "png",
+            "file": "images/datenum_8.png"
+        },
+        {
+            "defName": "IMAGE_DATENUM_7",
+            "type": "png",
+            "file": "images/datenum_7.png"
+        },
+        {
+            "defName": "IMAGE_DATENUM_6",
+            "type": "png",
+            "file": "images/datenum_6.png"
+        },
+        {
+            "defName": "IMAGE_DATENUM_5",
+            "type": "png",
+            "file": "images/datenum_5.png"
+        },
+        {
+            "defName": "IMAGE_DATENUM_4",
+            "type": "png",
+            "file": "images/datenum_4.png"
+        },
+        {
+            "defName": "IMAGE_DATENUM_3",
+            "type": "png",
+            "file": "images/datenum_3.png"
+        },
+        {
+            "defName": "IMAGE_DATENUM_2",
+            "type": "png",
+            "file": "images/datenum_2.png"
+        },
+        {
+            "defName": "IMAGE_DATENUM_1",
+            "type": "png",
+            "file": "images/datenum_1.png"
+        },
+        {
+            "defName": "IMAGE_DATENUM_0",
+            "type": "png",
+            "file": "images/datenum_0.png"
+        },
+        {
+            "defName": "IMAGE_BACKGROUND",
+            "type": "png",
+            "file": "images/background.png"
+        },
+        {
+            "defName": "IMAGE_MENU_ICON",
+            "type": "png",
+            "file": "images/menu_icon_91w.png"
+        },
+        {
+            "defName": "IMAGE_PM_MODE",
+            "type": "png",
+            "file": "images/time_format_PM.png"
         }
     ],
     "friendlyVersion": "VERSION",
