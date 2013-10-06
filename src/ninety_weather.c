@@ -24,19 +24,15 @@
 #define TIMEZONE_TWO_Y 45
 	
 #define HOUR_VIBRATION_START 8
-#define HOUR_VIBRATION_END 23
+#define HOUR_VIBRATION_END 20
 	
 #define TIMEZONE_ONE_NAME "CHN"
 #define TIMEZONE_TWO_NAME "GER"
 
-//#define TIMEZONE_ONE_NAME "SYD"
-//#define TIMEZONE_TWO_NAME "BER"
-	
+#define TIMEZONE_LOCAL_OFFSET (-7)
 #define TIMEZONE_ONE_OFFSET (+8)
 #define TIMEZONE_TWO_OFFSET (+2)
-#define TIMEZONE_LOCAL_OFFSET (-7)
 
-	
 	
 PBL_APP_INFO(MY_UUID,
 	     "Vic 91", "rfrcarvalho & Vic",
@@ -570,8 +566,10 @@ void handle_deinit(AppContextRef ctx) {
 	for (int i = 0; i < TOTAL_TIME_DIGITS; i++) {
 		bmp_deinit_container(&time_digits_images[i]);
 		bmp_deinit_container(&tzOne_digits_images[i]);
-		bmp_deinit_container(&tzTwo_digits_images[i]);
 	}
+	
+	bmp_deinit_container(&tzTwo_digits_images[2]);
+	bmp_deinit_container(&tzTwo_digits_images[3]);
 	
 	bmp_deinit_container(&tzMore[0]);
 	bmp_deinit_container(&tzMore[1]);	
